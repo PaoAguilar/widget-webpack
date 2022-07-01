@@ -12,10 +12,11 @@ export default {
   widgets: {
     myWidget: {
       new: () => {
+        console.log('HI')
         return {
           render: () => {
             ReactDOM.render(<Button 
-                headerTitle={init.headerTitle}
+                increment={init.increment}
             />, document.querySelector(init.selector));
           },
           unmount(){
