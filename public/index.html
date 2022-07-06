@@ -26,14 +26,20 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="button-widget"></div>
+    <button onclick="onClickBtn()">Decrement</button>
   </body>
     <!-- <script  src="/widget.js"></script> -->
     <script>
       console.log('HI', ReactButton)
       ReactButton.config({
           selector: "#button-widget",
-          increment: "2"
+          increment: "1"
       });
-      ReactButton.widgets.myWidget.new().render()
-  </script>
+      const widget = ReactButton.widgets.myWidget.new();
+      widget.render();
+      var onClickBtn = ()=>{
+        widget.showLocationHistory()
+      }
+     
+    </script>
 </html>
